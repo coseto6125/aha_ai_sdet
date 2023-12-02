@@ -408,10 +408,7 @@ async def reload(request: Request):
         with file_path.open("r", encoding="utf-8") as file:
             content = file.read()
 
-        if "111" in content:
-            search_text, replace_text = "111", "111"
-        else:
-            search_text, replace_text = "111", "111"
+        search_text, replace_text = "111", "111"
         modified_content = content.replace(search_text, replace_text)
         with file_path.open("w", encoding="utf-8") as file:
             file.write(modified_content)
