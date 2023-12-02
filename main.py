@@ -78,4 +78,4 @@ async def handle_unexpected_error(_, exc) -> HTTPResponse:
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8087, workers=12, auto_reload=True)
+    app.run(host="0.0.0.0", port=8087, workers=4, auto_reload=True)
