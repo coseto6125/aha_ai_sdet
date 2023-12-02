@@ -1,0 +1,108 @@
+[tool.poetry]
+name = "Aha AI SDET Candidate Exam"
+version = "0.1.0"
+description = "Aha AI SDET test"
+authors = ["E-NoR <enorenor@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+seleniumbase = "^4.21.7"
+aiohttp = "^3.9.1"
+orjson = "^3.9.10"
+markdown = "^3.5.1"
+python-dotenv = "^1.0.0"
+sanic = "^23.6.0"
+sanic-ext = "^23.6.0"
+loguru = "^0.7.2"
+
+[tool.poetry.group.dev.dependencies]
+pyink = "^23.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+select = [
+    "A", # flake8-annotations
+    "B", # flake8-bugbear
+    "C", # flake8-comprehensions
+    # "D", # pydocstyle
+    "E", # pycodestyle
+    "F", # pyflakes
+    "G", # flake8-builtins
+    "I", # flake8-import-order
+    "N", # flake8-broken-line
+    "Q", # flake8-quotes
+    # "S", # assert?
+    # "T", # print found?
+    "W", #
+    # "ANN", # 變量聲明
+    "ARG",
+    "BLE",
+    "COM",
+    "DJ",
+    "DTZ",
+    # "EM",  # var代替string
+    # "ERA", # comment outside
+    "EXE",
+    # "FBT", # var代替bool
+    "ICN",
+    "INP",
+    "ISC",
+    "NPY",
+    "PD",
+    "PGH",
+    "PIE",
+    "PL",
+    "PT",
+    "PTH",
+    "PYI",
+    "RET",
+    "RSE",
+    # "RUF", #各種utf檢查（逗號）問題
+    "SIM",
+    "SLF",
+    "TCH",
+    "TID",
+    "TRY",
+    "UP",
+    "YTT",
+]
+ignore = [
+    "B905", #zip struct need
+    "SLF001", #private function
+    "N806",
+    "PLR0911", # code 複雜度
+    "PLR0912", # code 複雜度
+    "PLR0915", # code 複雜度
+    "C901", # code 複雜度
+    "N801", #class not pep8
+    "TRY003",
+    "DTZ005",
+    "PTH123",
+    "UP035",
+    "DTZ006", # timezone
+    "PT013", # import replace from import
+    "E501", # 字數太長轉換
+    "INP001", # ignore missing __init__.py
+    "PLR2004", # var代替數字
+    "W292", # 最後要空行？
+    "COM812", # function最後一個參數帶逗號
+    "D101",
+    "D407",
+    "D410",
+    "D100",
+    "D102",
+    "F401",
+    "F841",
+    "F811",
+    "W293",
+    # pyink fomart 會處理，忽略
+]
