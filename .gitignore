@@ -3,3 +3,5 @@
 .DS_Store
 downloaded_files/*
 latest_logs/*
+case_exam/downloaded_files/*
+case_exam/latest_logs/*
