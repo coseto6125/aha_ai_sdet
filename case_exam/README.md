@@ -1,4 +1,6 @@
+
 install requirement:  
+&ensp;-- make sure you have Chrome(browser) with any version.  
 &ensp;-- `poetry instal --no-root`  
 ```
 python = "^3.11"
